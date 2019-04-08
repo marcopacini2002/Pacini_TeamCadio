@@ -9,10 +9,15 @@ namespace Cardio_pacini
     public class Class1
     {
         //ho creato il metodo per il controllo della frequenza cardiaca
-        public static int FrequenzaCardiaca(int eta)
+        public static double FrequenzaCardiaca(int eta,ref double minimo)
         {
+            double risultato = 0;
             int fconsigliata = 220 - eta;
-            return fconsigliata;
+
+            risultato=fconsigliata*0.9;
+            minimo = fconsigliata * 0.7;
+
+            return risultato;
         }
     }
 }

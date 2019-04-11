@@ -132,5 +132,31 @@ namespace Cardio_pacini
 
             return i;
         }
+
+        //metodo per il controllo di km
+        public static int ControlloKm(int km)
+        {
+            int i = 0;
+            try
+            {
+                Convert.ToDouble(km);
+                if (km >= 0 && km <= 200)
+                {
+
+                }
+                else
+                {
+                    i = -1;
+                }
+
+            }
+            catch (Exception)
+            {
+                i = -1;
+            }
+
+
+            return i;
+        }
     }
 }

@@ -49,6 +49,33 @@ namespace UnitTestProject1
             Assert.AreEqual(risposta_attesa, risposta);
         }
 
+        //4 CORSA
+        [TestMethod]
+        [DataTestMethod]
+        [DataRow(30,80,2160)]
+        [DataRow(0, 0, 0)]
+        [DataRow(-30, -80, 0)]
 
+        public void TestMethodSpesaEnergeticaCorsa(int km, int peso, double risposta_at)
+        {
+            double risposta_attesa = risposta_at;
+            double risposta = Cardio_pacini.Class1.SpesaEnergeticaCorsa(km,peso);
+            Assert.AreEqual(risposta_attesa, risposta);
+        }
+
+
+        //4 CAMMINATA
+        [TestMethod]
+        [DataTestMethod]
+        [DataRow(30, 80, 1200)]
+        [DataRow(0, 0, 0)]
+        [DataRow(-30, -80, 0)]
+
+        public void TestMethodSpesaEnergeticaCamminata(int km, int peso, double risposta_at)
+        {
+            double risposta_attesa = risposta_at;
+            double risposta = Cardio_pacini.Class1.SpesaEnergeticaCamminata(km, peso);
+            Assert.AreEqual(risposta_attesa, risposta);
+        }
     }
 }

@@ -73,5 +73,36 @@ namespace Cardio_pacini
             return CalorieB;
         }
 
+
+        //4 CORSA
+        public static double SpesaEnergeticaCorsa(int km,int peso)
+        {
+            double SpesaEnergetica = 0;
+            double ControlloKm = ControlloValori.ControlloKm(km);
+            double ControlloPeso = ControlloValori.ControlloPeso(peso);
+
+            if(ControlloKm!=-1&&ControlloPeso!=-1)
+            {
+                SpesaEnergetica = 0.9 * km * peso;
+            }
+
+            return SpesaEnergetica;
+        }
+
+
+        //4 CAMMINATA
+        public static double SpesaEnergeticaCamminata(int km, int peso)
+        {
+            double SpesaEnergetica = 0;
+            double ControlloKm = ControlloValori.ControlloKm(km);
+            double ControlloPeso = ControlloValori.ControlloPeso(peso);
+
+            if (ControlloKm != -1 && ControlloPeso != -1)
+            {
+                SpesaEnergetica = 0.50* km * peso;
+            }
+
+            return SpesaEnergetica;
+        }
     }
 }

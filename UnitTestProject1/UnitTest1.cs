@@ -20,11 +20,13 @@ namespace UnitTestProject1
             Assert.AreEqual(minimo, min);
         }
 
+        //3 UOMO TEST
+
         [TestMethod]
         [DataTestMethod]
-        [DataRow(20, 72, 180, 15, 275)]
+        [DataRow(30, 90, 190, 25, 530)]
         [DataRow(0, 0, 0, 0, 0)]
-        [DataRow(-20, -78, -170, -15, 0)]
+        [DataRow(-30, -90, -165, -30, 0)]
 
         public void TestMethodCalorieBruciateUomo(int età, double peso, double frequenza, double durata, double CalorieBruciate)
         {
@@ -33,11 +35,12 @@ namespace UnitTestProject1
             Assert.AreEqual(risposta_attesa, risposta);
         }
 
+        //3 DONNA TEST
         [TestMethod]
         [DataTestMethod]
-        [DataRow(20, 72, 180, 15, 253)]
+        [DataRow(30, 90, 190, 25, 467)]
         [DataRow(0, 0, 0, 0, 0)]
-        [DataRow(-20, -78, -170, -15, 0)]
+        [DataRow(-30, -90, -165, -30, 0)]
 
         public void TestMethodCalorieBruciateDonna(int età, double peso, double frequenza, double durata, double CalorieBruciate)
         {
@@ -45,5 +48,7 @@ namespace UnitTestProject1
             double risposta = Cardio_pacini.Class1.CalorieBruciateDonna(età, peso, frequenza, durata);
             Assert.AreEqual(risposta_attesa, risposta);
         }
+
+
     }
 }
